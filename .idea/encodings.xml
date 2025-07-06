@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xxliang-basic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xxliang-basic/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xxliang-basic/xxliang-basic-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xxliang-basic/xxliang-basic-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xxliang-basic/xxliang-gen-code/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xxliang-basic/xxliang-gen-code/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xxliang-basic/yunc-support/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xxliang-basic/yunc-support/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/yunc-api-course/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/yunc-api-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/yunc-api-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/yunc-api-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/yunc-api-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/yunc-api-uaa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-api/yunc-api-uaa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-basic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-basic/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-basic/yunc-basic-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-basic/yunc-basic-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-basic/yunc-basic-dependency/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-basic/yunc-basic-dependency/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-basic/yunc-resources-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/ymcc-pojo-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-course/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-media/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-uaa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-uaa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-pojo/yunc-pojo-user/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/ymcc-service-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-course/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-media/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-uaa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-uaa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-service/yunc-service-user/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-support/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-support/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-support/yunc-service-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yunc-support/yunc-service-gateway/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

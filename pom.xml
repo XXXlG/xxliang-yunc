@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xxliang.yunc</groupId>
+    <artifactId>xxliang-yunc</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--打包方式：pom,代表这个项目只是做pom管理，不写代码-->
+    <packaging>pom</packaging>
+    <modules>
+        <module>xxliang-basic</module>
+        <module>yunc-support</module>
+        <module>yunc-basic</module>
+        <module>yunc-service</module>
+        <module>yunc-pojo</module>
+        <module>yunc-api</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+<!--    环境配置  -->
+<!--    <profiles>
+        &lt;!&ndash; 注:使用pom渲染yml的方式后,启动jar就如果指定外部配置文件 spring.config.location 并且yml中有使用 @@ 表达式 会启动错误       &ndash;&gt;
+        &lt;!&ndash; 如果还想要使用外部配置文件方式启动jar可以把打包后jar包中 BOOT-INF\classes 路径下的yaml提取后放入到服务器中        &ndash;&gt;
+        &lt;!&ndash; 生产环境强烈建议使用外部配置文件.........        &ndash;&gt;
+        <profile>
+            <id>dev</id>
+            <properties>
+                &lt;!&ndash; 项目名称                &ndash;&gt;
+                <name>xxliang-yunc</name>
+                &lt;!&ndash; nacos 连接地址&ndash;&gt;
+                &lt;!&ndash; 读取的命名空间,todo,这里一定要写命名空间的id,不可以写名称,否者会读取不到数据                &ndash;&gt;
+                <profiles.active>geteway</profiles.active>
+                <nacos.server>127.0.0.1:8848</nacos.server>
+                <nacos.username>nacos</nacos.username>
+                <nacos.password>nacos</nacos.password>
+                &lt;!&ndash; 服务注册组,非必要不要修改                &ndash;&gt;
+                <nacos.discovery.group>DEFAULT_GROUP</nacos.discovery.group>
+                &lt;!&ndash; 配置文件组,非必要不要修改                &ndash;&gt;
+                <nacos.config.group>DEFAULT_GROUP</nacos.config.group>
+            </properties>
+            <activation>
+                &lt;!&ndash; 默认环境 &ndash;&gt;
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>-->
+
+    <!--SpringBoot 2.2.5 -->
+    <parent>
+        <groupId> org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+    </parent>
+
+    <!--SpringCloud 2.2.1 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.1.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+    <!--公共的依赖-->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.50</version>
+        </dependency>
+<!--单元测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    </dependencies>
+</project>

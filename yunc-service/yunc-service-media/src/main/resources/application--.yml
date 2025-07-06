@@ -1,0 +1,41 @@
+server:
+  port: 10070
+spring:
+  application:
+    name: service-media #服务名
+  cloud: #注册到Nacos
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:13306/ymcc-media?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    使用druid连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml #指定mapper文件位置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql
+media:
+  upload-base-dir: "d:/" #分片上传地址
+  #oad‐location: "d:/"  #合并之后的视频文件存储地址
+  ffmpeg‐path: "D:/ffmpeg-master-latest-win64-gpl-shared/bin/ffmpeg" #ffmpeg视频工具安装地址
+  rtmp: "rtmp://39.107.101.196/live" # 推流到云服务器的地址
+  play: "http://39.107.101.196:8080/live/"
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+
+  #生产者配置
+  producer:
+    #生产者组名字
+    group: "service-producer"
+    # 消息最大长度 默认 1024 * 4 (4M)
+    max-message-size: 4096
+    # 发送消息超时时间，默认 3000
+    send-message-timeout: 3000
+    # 发送消息失败重试次数，默认2
+    retry-times-when-send-failed: 2
+    retry-times-when-send-async-failed: 2

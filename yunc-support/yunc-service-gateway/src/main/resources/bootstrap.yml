@@ -1,0 +1,19 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: dev
+  application:
+    name: service-gateway
+  cloud:
+    # 你也许还不能接受这样的命名空间导入规则。但是先不要抗拒，融合贯通后反思改进好吗？
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #注册中心
+        group: DEFAULT_GROUP
+      config:
+        server-addr: 127.0.0.1:8848 #配置中心
+        namespace: ymcc-xxliang
+        group: DEFAULT_GROUP
+        file-extension: yaml #配置文件格式
+        prefix: application-gateway #配置前缀 ，默认使用sring.application.name

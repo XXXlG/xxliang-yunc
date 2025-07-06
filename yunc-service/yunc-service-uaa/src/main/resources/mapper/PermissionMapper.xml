@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxliang.yunc.mapper.PermissionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xxliang.yunc.domain.Permission">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="resource" property="resource" />
+        <result column="state" property="state" />
+        <result column="menu_id" property="menuId" />
+        <result column="sn" property="sn" />
+    </resultMap>
+    <select id="getPermissByLoginId" resultMap="BaseResultMap">
+        select p.name ,p.resource,p.state,p.menu_id,p.sn
+        from t_permission p
+        where id in (
+            select trp.permission_id
+            from t_login_role tlr join t_role_permission trp on tlr.role_id = trp.role_id
+            where  tlr.login_id = #{loginId}
+        );
+    </select>
+
+</mapper>

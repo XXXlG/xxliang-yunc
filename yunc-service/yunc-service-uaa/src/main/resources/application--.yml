@@ -1,0 +1,29 @@
+server:
+  port: 10040
+spring:
+  application:
+    name: service-uaa #服务名
+  cloud: #注册到Nacos
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group #这里和file.conf中事务组名一样
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:13306/ymcc-uaa?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    使用druid连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+seata:
+  enableAutoDataSourceProxy: false
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml #指定mapper文件位置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql
+ymcc:
+  authUrl: "http://localhost:${server.port}/oauth/token?client_id=%s&client_secret=%s&grant_type=password&username=%s&password=%s"
+  refreshUrl: "http://localhost:${server.port}/oauth/token?grant_type=refresh_token&refresh_token=%s&client_id=%s&client_secret=%s"

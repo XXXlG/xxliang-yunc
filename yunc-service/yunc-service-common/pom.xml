@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.xxliang.yunc</groupId>
+        <artifactId>yunc-service</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>yunc-service-common</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+<!--
+    1. 基础环境
+    2. 注册nacos
+    3. 短信验证码仅靠redis来维护执行
+-->
+    <dependencies>
+        <!--     公共依赖导入 -->
+        <dependency>
+            <groupId>com.xxliang.yunc</groupId>
+            <artifactId>yunc-basic-dependency</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--       pojo层导入.....  -->
+        <dependency>
+            <groupId>com.xxliang.yunc</groupId>
+            <artifactId>xxliang-basic-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--整合Redis , 底层可以用jedis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+<!--            排除lettuce-core 在高并发的时候 有内存泄露的问题 -->
+            <exclusions>
+                <exclusion>
+                    <groupId>io.lettuce</groupId>
+                    <artifactId>lettuce-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+<!--    使用自定义的 jedis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+<!--            fastJson-->
+        </dependency>
+        <!--    短信服务    -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>4.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>dysmsapi20170525</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+<!--        OSS-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.17.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.xxliang.yunc</groupId>
+            <artifactId>yunc-pojo-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.xxliang.yunc</groupId>
+            <artifactId>yunc-resources-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+<!--rocketMQ-->
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>2.0.4</version>
+        </dependency>
+    </dependencies>
+</project>
